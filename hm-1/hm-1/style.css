@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+div.form-container {
+    position: fixed;
+    width: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: aqua;
+    padding: 0;
+    width: 500px;
+}
+
+.form {
+    position: relative;
+    margin: 0;
+    height: 400px;
+    width: 500px;
+}
+.center-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    margin: 10px auto 10px;
+}
+.form-title {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+.subject, .message, .user-data {
+    margin: 10px auto 10px;
+}
+.subject input, .message input {
+    width: 100%;
+}
+.subject input {
+    height: 30px;
+}
+.message input {
+    height: 100px;
+}
+.user-data .name {
+    float: left;
+}
+.user-data .email {
+    float: right;
+}
+.user-data::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.center-form button {
+    float: right;
+}
+.center-form::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+@media(max-width: 768px) {
+    div.form-container, .form, .user-data .name, .user-data .email, .center-form button {
+        width: 100%;
+    }
+    .form {
+        height: 300px;
+    }
+    .name, .subject, .message, button {
+        margin: 10px 0 10px;
+    }
+    .user-data {
+        margin: 0;
+    }
+    .form-title {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    .message input, .subject input, .user-data input, .center-form button {
+        height: 30px;
+    }
+}
+
